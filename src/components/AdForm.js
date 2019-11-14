@@ -28,31 +28,13 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const CTAOptions = [
-  {
-    value: 'Click Here',
-    label: 'Click Here',
-  },
-  {
-    value: 'Shop Now',
-    label: 'Shop Now',
-  },
-  {
-    value: 'Learn More',
-    label: 'Learn More',
-  },
-  {
-    value: 'Get Offer',
-    label: 'Get Offer',
-  },
-  {
-    value: 'Claim Offer',
-    label: 'Claim Offer',
-  },
-  {
-    value: 'Get Started',
-    label: 'Get Started',
-  },
+const CTAOptions = [ 
+  'Click Here',
+  'Shop Now',
+  'Learn More',
+  'Get Offer',
+  'Claim Offer',
+  'Get Started', 
 ];
 
 const AdForm = props => {
@@ -86,8 +68,8 @@ const AdForm = props => {
 
         >
           {CTAOptions.map(option => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
+          <MenuItem key={option} value={option}>
+            {option}
           </MenuItem>
         ))}
         </TextField>
